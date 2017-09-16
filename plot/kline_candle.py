@@ -1,12 +1,5 @@
 # -*- coding: utf-8 -*-
-
-  
-  
-
-
-
-
-# jupyter-notebook
+# 2017/09/16
 # author : willow_j
 # email : willowsophy@foxmail.com
 
