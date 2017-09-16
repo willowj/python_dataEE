@@ -101,4 +101,4 @@ if __name__ == '__main__':
              df, 
              ma=['ma10', 'ma20'],
              render_path='%s_kline_%s.html' % (name, period)
-        )
+             )
