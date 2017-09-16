@@ -24,4 +24,4 @@ params:name, df, prices_cols=None, ma=('ma10',), width=1600, height=750, kline_x
      kline_xaxis_pos='top'： k-line图例默认在上方
      render_path：   render to html file path
      
- python_dataEE/plot/pyecharts_k-candle.png
+https://github.com/willowj/python_dataEE/blob/master/plot/pyecharts_k-candle.png
