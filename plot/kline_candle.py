@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # 2017/09/16
 # author : willow_j
-# email : willowsophy@foxmail.com
+# email : willow_j@foxmail.com
 
 from __future__ import unicode_literals
 from __future__ import print_function
@@ -51,7 +51,6 @@ def kline_js(name, df, prices_cols=None, ma=('ma10',), width=1600, height=750, k
             legend_top="70%",
             is_stack=True,
             is_xaxislabel_align=True,
-
             )
     bar.add('down',
             x_axis=downs.index.format(),
@@ -90,8 +89,10 @@ def kline_js(name, df, prices_cols=None, ma=('ma10',), width=1600, height=750, k
 
 if __name__ == '__main__':
     import tushare as ts
+    
     name = 'hs300'
     period = '5'
+    
     df = ts.get_hist_data(name, ktype=period)
     if period.isdigit():
         period += 'min'
