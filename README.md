@@ -1,7 +1,7 @@
-# python_dataEE/plot/kline_candle.py
+#画k线蜡烛图 python_dataEE/plot/kline_candle.py
 https://github.com/willowj/python_dataEE/blob/master/plot/kline_candle.py
 
-画k线蜡烛图
+
 
 #require modules: pyecharts,pandas,numpy
 
