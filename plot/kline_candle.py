@@ -96,5 +96,9 @@ if __name__ == '__main__':
     df = ts.get_hist_data(name, ktype=period)
     if period.isdigit():
         period += 'min'
-    t = kline_js('%s_kline_%s' % (name, period), df, ma=['ma10', 'ma20'])
-    t.render('%s_kline_%s.html' % (name, period))
+        
+    kline_js('%s_kline_%s' % (name, period), 
+             df, 
+             ma=['ma10', 'ma20'],
+             render_path='%s_kline_%s.html' % (name, period)
+        )
