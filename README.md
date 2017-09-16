@@ -1,13 +1,10 @@
-# python_dataEE
+# python_dataEE/plot/kline_candle.py
+https://github.com/willowj/python_dataEE/blob/master/plot/kline_candle.py
 
 画k线蜡烛图
 
-require modules: pyecharts,pandas,numpy
+#require modules: pyecharts,pandas,numpy
 
-
-plot/kline_candle.py
-
-https://github.com/willowj/python_dataEE/blob/master/plot/kline_candle.py
 
 #example: jupyter-notbook
 
@@ -19,9 +16,10 @@ df = ts.get_hist_data('hs300', ktype='5')
 
 Kline_js('hs300_k-line-5min',df,ma=('ma10','ma20'),width=800, height=400,)
 
-params:name, df, prices_cols=None, ma=('ma10',), width=1600, height=750, kline_xaxis_pos='top', render_path=None
+params:
+name, df, prices_cols=None, ma=('ma10',), width=1600, height=750, kline_xaxis_pos='top', render_path=None
 
-     name: 图例名称
+     name:    图例名称
      
      df:    columns包含 prices_cols以及‘volume’ 的pandas.DataFrame
      
