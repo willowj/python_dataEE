@@ -1,4 +1,6 @@
-#画k线蜡烛图 python_dataEE/plot/kline_candle.py
+#画k线蜡烛图 python_dataEE/plot/kline_candle.py  
+
+建议使用jupyter-notbook
 
 https://github.com/willowj/python_dataEE/blob/master/plot/kline_candle.py
 
