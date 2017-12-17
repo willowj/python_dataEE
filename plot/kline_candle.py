@@ -11,13 +11,14 @@ from pyecharts import Kline, Bar, Line, Grid, Overlap
 
 def kline_js(name, df, prices_cols=None, ma=('ma10',), width=1600, height=750, kline_xaxis_pos='top', render_path=None):
     '''
-    params:
-    name:    图例名称
-    df:    columns包含 prices_cols以及‘volume’ 的pandas.DataFrame
-    prices_cols :  默认 [u'open', u'close', u'low', u'high']
-    width=1600, height=750 :   默认图片大小
-    kline_xaxis_pos='top'： k-line图例默认在上方
-    render_path：   render to html file path
+    @params:
+    - name: str                      #图例名称
+    - df:  pandas.DataFrame          #columns包含 prices_cols、‘volume’
+    - prices_cols : list             #默认 [u'open', u'close', u'low', u'high']
+    - ma=('ma10',): list or tuple    #移动平均周期
+    - width=1600, height=750         # 默认图片大小
+    - kline_xaxis_pos='top'           #k-line图例默认在上方
+    - render_path： str               #html file path to save
     '''
     if not prices_cols:
         prices_cols = [u'open', u'close', u'low', u'high']
@@ -26,7 +27,7 @@ def kline_js(name, df, prices_cols=None, ma=('ma10',), width=1600, height=750, k
         raise AttributeError("%s or 'volume' not in columns" %
                              str(prices_cols))
 
-    df.sort_index(inplace=True)
+
     kline = Kline(name, width=width, height=height)
     kline.add('k-candle',
               df.index.format(),
@@ -80,7 +81,7 @@ def kline_js(name, df, prices_cols=None, ma=('ma10',), width=1600, height=750, k
             line.add(ma_, df.index.format(), df[ma_].values.tolist())
     if Line_draw:
         overlap = Overlap()
-        overlap.add(kline)  # overlap kline
+        overlap.add(kline)  # overlap kline and ma
         overlap.add(line)
 
     if render_path:
@@ -94,6 +95,7 @@ if __name__ == '__main__':
     period = '5'
 
     df = ts.get_hist_data(name, ktype=period)
+    df.sort_index(inplace=True)
     if period.isdigit():
         period += 'min'
 
