@@ -22,7 +22,7 @@ def kline_js(name, df, prices_cols=None, ma=('ma10',), width=1600, height=750, k
     if not prices_cols:
         prices_cols = [u'open', u'close', u'low', u'high']
 
-    if not set(prices_cols+['volume']) < set(df.columns):
+    if not set(prices_cols+['volume']).issubset(set(df.columns)):
         raise AttributeError("%s or 'volume' not in columns" %
                              str(prices_cols))
 
@@ -89,16 +89,17 @@ def kline_js(name, df, prices_cols=None, ma=('ma10',), width=1600, height=750, k
 
 if __name__ == '__main__':
     import tushare as ts
-    
+
     name = 'hs300'
     period = '5'
-    
+
     df = ts.get_hist_data(name, ktype=period)
     if period.isdigit():
         period += 'min'
-        
-    kline_js('%s_kline_%s' % (name, period), 
-             df, 
+
+    kline_js('%s_kline_%s' % (name, period),
+             df,
              ma=['ma10', 'ma20'],
+             width=900, height=600,
              render_path='%s_kline_%s.html' % (name, period)
              )
