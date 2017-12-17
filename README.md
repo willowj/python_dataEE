@@ -15,7 +15,7 @@ Kline_js('hs300_k-line-5min',
          )
 ```
 
-![image](https://github.com/willowj/python_dataEE/blob/master/plot/pyecharts_k-candle.png)
+![image](https://github.com/willowj/python_dataEE/blob/master/plot/k_candle.gif)
 
 params:
 
