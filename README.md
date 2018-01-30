@@ -5,7 +5,7 @@
 > python: jupyter-notbook       #*建议使用jupyter-notbook*
 
 ```python
-from pyecharts import Kline, Bar, Line, Grid, Overlap
+from kline_candle import Kline_js
 import tushare as ts
 df = ts.get_hist_data('hs300', ktype='5')
 Kline_js('hs300_k-line-5min',
