@@ -35,4 +35,4 @@ required modules :
 
 > pyecharts
 > pandas
-> tushare
+> tushare (for test)
