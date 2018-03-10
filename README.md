@@ -34,5 +34,7 @@ https://github.com/willowj/python_dataEE/blob/master/plot/kline_candle.py
 required modules : 
 
 > pyecharts
+
 > pandas
+
 > tushare (for test)
